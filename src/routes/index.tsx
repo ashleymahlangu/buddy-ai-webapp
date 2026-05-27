@@ -2,12 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Mail,
   FileText,
-  MessageSquare,
   ListChecks,
   BookOpen,
   Sparkles,
   ShieldCheck,
+  MessageSquare,
 } from "lucide-react";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
