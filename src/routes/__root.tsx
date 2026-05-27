@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { FloatingHrChat } from "@/components/FloatingHrChat";
+import { VoiceHrAssistant } from "@/components/VoiceHrAssistant";
 
 import appCss from "../styles.css?url";
 
@@ -74,11 +75,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "HRFlow AI — Your AI co-pilot for people teams" },
+      { name: "description", content: "HRFlow AI: smart HR tools for emails, meeting summaries, planning, research, voice assistance, and daily reminders." },
+      { name: "author", content: "HRFlow AI" },
+      { property: "og:title", content: "HRFlow AI" },
+      { property: "og:description", content: "Smart AI tools for HR teams — emails, meetings, planning, voice, and reminders." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
@@ -117,6 +118,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <Outlet />
       <FloatingHrChat />
+      <VoiceHrAssistant />
     </QueryClientProvider>
   );
 }
