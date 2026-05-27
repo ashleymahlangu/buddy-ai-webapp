@@ -116,6 +116,8 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Outlet />
+      <FloatingHrChat />
     </QueryClientProvider>
   );
 }
+
