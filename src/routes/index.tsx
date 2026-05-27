@@ -44,12 +44,7 @@ const tools = [
     desc: "Break an HR goal into phases, owners, effort and priorities.",
   },
 
-  {
-    to: "/task-planner",
-    icon: ListChecks,
-    title: "Task Planner",
-    desc: "Break an HR goal into phases, owners, effort and priorities.",
-  },
+
   {
     to: "/research",
     icon: BookOpen,
