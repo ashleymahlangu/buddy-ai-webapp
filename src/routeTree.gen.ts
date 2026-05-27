@@ -13,6 +13,7 @@ import { Route as TaskPlannerRouteImport } from './routes/task-planner'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as MeetingSummaryRouteImport } from './routes/meeting-summary'
 import { Route as EmailGeneratorRouteImport } from './routes/email-generator'
+import { Route as DailyPlannerRouteImport } from './routes/daily-planner'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TaskPlannerRoute = TaskPlannerRouteImport.update({
@@ -35,6 +36,11 @@ const EmailGeneratorRoute = EmailGeneratorRouteImport.update({
   path: '/email-generator',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DailyPlannerRoute = DailyPlannerRouteImport.update({
+  id: '/daily-planner',
+  path: '/daily-planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/daily-planner': typeof DailyPlannerRoute
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-summary': typeof MeetingSummaryRoute
   '/research': typeof ResearchRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/daily-planner': typeof DailyPlannerRoute
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-summary': typeof MeetingSummaryRoute
   '/research': typeof ResearchRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/daily-planner': typeof DailyPlannerRoute
   '/email-generator': typeof EmailGeneratorRoute
   '/meeting-summary': typeof MeetingSummaryRoute
   '/research': typeof ResearchRoute
@@ -67,6 +76,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/daily-planner'
     | '/email-generator'
     | '/meeting-summary'
     | '/research'
@@ -74,6 +84,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/daily-planner'
     | '/email-generator'
     | '/meeting-summary'
     | '/research'
@@ -81,6 +92,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/daily-planner'
     | '/email-generator'
     | '/meeting-summary'
     | '/research'
@@ -89,6 +101,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DailyPlannerRoute: typeof DailyPlannerRoute
   EmailGeneratorRoute: typeof EmailGeneratorRoute
   MeetingSummaryRoute: typeof MeetingSummaryRoute
   ResearchRoute: typeof ResearchRoute
@@ -125,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmailGeneratorRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/daily-planner': {
+      id: '/daily-planner'
+      path: '/daily-planner'
+      fullPath: '/daily-planner'
+      preLoaderRoute: typeof DailyPlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -137,6 +157,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DailyPlannerRoute: DailyPlannerRoute,
   EmailGeneratorRoute: EmailGeneratorRoute,
   MeetingSummaryRoute: MeetingSummaryRoute,
   ResearchRoute: ResearchRoute,
