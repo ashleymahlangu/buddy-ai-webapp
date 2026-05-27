@@ -38,11 +38,12 @@ const tools = [
     desc: "Turn raw notes into a clean TL;DR with decisions, owners and action items.",
   },
   {
-    to: "/chat",
-    icon: MessageSquare,
-    title: "HR Chatbot",
-    desc: "Ask about policies, leave, onboarding, performance — get neutral, helpful answers.",
+    to: "/task-planner",
+    icon: ListChecks,
+    title: "Task Planner",
+    desc: "Break an HR goal into phases, owners, effort and priorities.",
   },
+
   {
     to: "/task-planner",
     icon: ListChecks,
