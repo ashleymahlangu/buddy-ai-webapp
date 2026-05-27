@@ -2,12 +2,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Mail,
   FileText,
-  MessageSquare,
   ListChecks,
   BookOpen,
   Sparkles,
   ShieldCheck,
+  MessageSquare,
 } from "lucide-react";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -37,17 +38,13 @@ const tools = [
     desc: "Turn raw notes into a clean TL;DR with decisions, owners and action items.",
   },
   {
-    to: "/chat",
-    icon: MessageSquare,
-    title: "HR Chatbot",
-    desc: "Ask about policies, leave, onboarding, performance — get neutral, helpful answers.",
-  },
-  {
     to: "/task-planner",
     icon: ListChecks,
     title: "Task Planner",
     desc: "Break an HR goal into phases, owners, effort and priorities.",
   },
+
+
   {
     to: "/research",
     icon: BookOpen,
@@ -81,10 +78,16 @@ function Index() {
           The everyday AI co-pilot for your HR team
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-          Five focused tools to write better, decide faster, and stay consistent across hiring,
-          onboarding, performance, and people operations.
+          Four focused tools for hiring, onboarding and performance — plus{" "}
+          <span className="font-medium text-foreground">Aria</span>, your floating HR chatbot,
+          always one tap away in the corner.
         </p>
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs text-muted-foreground">
+          <MessageSquare className="h-3.5 w-3.5 text-primary" />
+          Look bottom-right → tap the glowing orb to chat with Aria
+        </div>
       </section>
+
 
       <section className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-6 pb-20 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map(({ to, icon: Icon, title, desc }) => (
