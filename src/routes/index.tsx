@@ -10,6 +10,7 @@ import {
   CalendarClock,
   Mic,
 } from "lucide-react";
+import hrflowIcon from "@/assets/hrflow-icon.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
