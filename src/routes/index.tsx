@@ -65,9 +65,13 @@ function Index() {
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Sparkles className="h-5 w-5" />
-            </div>
+            <img
+              src={hrflowIcon}
+              alt="HRFlow AI icon"
+              width={36}
+              height={36}
+              className="h-9 w-9 rounded-lg"
+            />
             <span className="font-semibold tracking-tight">HRFlow AI</span>
           </div>
           <span className="hidden items-center gap-2 text-xs text-muted-foreground sm:inline-flex">
