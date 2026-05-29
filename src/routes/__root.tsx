@@ -78,11 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "HRFlow AI — Your AI co-pilot for people teams" },
       { name: "description", content: "HRFlow AI: smart HR tools for emails, meeting summaries, planning, research, voice assistance, and daily reminders." },
       { name: "author", content: "HRFlow AI" },
-      { property: "og:title", content: "HRFlow AI" },
-      { property: "og:description", content: "Smart AI tools for HR teams — emails, meetings, planning, voice, and reminders." },
+      { property: "og:title", content: "HRFlow AI — Your AI co-pilot for people teams" },
+      { property: "og:description", content: "HRFlow AI: smart HR tools for emails, meeting summaries, planning, research, voice assistance, and daily reminders." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "HRFlow AI — Your AI co-pilot for people teams" },
+      { name: "twitter:description", content: "HRFlow AI: smart HR tools for emails, meeting summaries, planning, research, voice assistance, and daily reminders." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1491ecc5-c408-4419-be88-ed49826d7534" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/1491ecc5-c408-4419-be88-ed49826d7534" },
     ],
     links: [
       {
